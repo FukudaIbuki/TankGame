@@ -11,7 +11,7 @@ HUD::HUD(GameObject* parent)
 
 void HUD::Initialize()
 {
-	hHUD_ = Image::Load("HUD02.png");
+	hHUD_ = Image::Load("HUD.png");
 	assert(hHUD_ >= 0);
 	hNumbers_ = Image::Load("numbers2.png");
 	assert(hHUD_ >= 0);
@@ -42,7 +42,7 @@ void HUD::Update()
 	//tKinoko_.position_ = { -0.31, 0.85, 0 };
 	//tKinoko_.scale_ = { 0.7, 0.7, 1 };
 	//int eneNum = ((PlayScene *)(GetParent()))->GetEnemyNum();
-	//‚±‚±‚ÅƒXƒgƒŠƒ“ƒO‚É•ªŠ„‚µ‚ÄA”Žš‚ðì‚Á‚Ä‚¢‚­
+	//ã“ã“ã§ã‚¹ãƒˆãƒªãƒ³ã‚°ã«åˆ†å‰²ã—ã¦ã€æ•°å­—ã‚’ä½œã£ã¦ã„ã
 }
 
 
