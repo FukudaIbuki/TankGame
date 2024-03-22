@@ -10,17 +10,17 @@ Enemy::Enemy(GameObject* parent)
 
 void Enemy::Initialize()
 {
-	hModel_ = Model::Load("Mushroom 1.fbx");
+	hModel_ = Model::Load("Mushroom.fbx");
 	assert(hModel_ >= 0);
-	//ƒAƒjƒ[ƒVƒ‡ƒ“‚ÌƒZƒbƒg
+	//ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã®ã‚»ãƒƒãƒˆ
 	Model::SetAnimFrame(hModel_, 0, 60, 1);
-	float x = (float)rand() / RAND_MAX;//0-1‚Ì—”
+	float x = (float)rand() / RAND_MAX;//0-1ã®ä¹±æ•°
 
-	x = 2.0 * x; // 0-2‚Ì—”
-	transform_.position_.x = 25.0 * (x - 1.0); //25*(-1.0 ` 1.0)‚Ì—”
-	float z = (float)rand() / RAND_MAX;//0-1‚Ì—”
-	z = 2.0 * z; // 0-2‚Ì—”
-	transform_.position_.z = 25.0 * (z - 1.0); //25*(-1.0 ` 1.0)‚Ì—”
+	x = 2.0 * x; // 0-2ã®ä¹±æ•°
+	transform_.position_.x = 25.0 * (x - 1.0); //25*(-1.0 ï½ 1.0)ã®ä¹±æ•°
+	float z = (float)rand() / RAND_MAX;//0-1ã®ä¹±æ•°
+	z = 2.0 * z; // 0-2ã®ä¹±æ•°
+	transform_.position_.z = 25.0 * (z - 1.0); //25*(-1.0 ï½ 1.0)ã®ä¹±æ•°
 	transform_.position_.y = 0;
 
 	Ground* pGround = (Ground*)FindObject("Ground");
