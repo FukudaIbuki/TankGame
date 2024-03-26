@@ -6,26 +6,23 @@ class Enemy :
 {
     int hModel_;
 public:
-    //ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+    //ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     Enemy(GameObject* parent);
 
-    //ƒfƒXƒgƒ‰ƒNƒ^
+    //ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
     ~Enemy();
 
-    //‰Šú‰»
+    //åˆæœŸåŒ–
     void Initialize() override;
 
-    //XV
+    //æ›´æ–°
     void Update() override;
 
-    //•`‰æ
+    //æç”»
     void Draw() override;
 
-    //ŠJ•ú
+    //é–‹æ”¾
     void Release() override;
 
-    //‰½‚©‚É“–‚½‚Á‚½
-    //ˆø”FpTarget “–‚½‚Á‚½‘Šè
-    void OnCollision(GameObject* pTarget) override;
 };
 
