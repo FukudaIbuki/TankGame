@@ -26,7 +26,7 @@ void PlayScene::Initialize()
 	Instantiate<Ground>(this);
 	player = Instantiate<Tank>(this);
 	//Instantiate<TankHead>(this);
-	//“G‚ðƒCƒ“ƒXƒ^ƒ“ƒX‰»
+	//æ•µã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–
 	enemyNum = ENEMY_NUM;
 	for (int i = 0; i < enemyNum; i++)
 		Instantiate<Enemy>(this);
@@ -39,12 +39,17 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
-	//ƒ^ƒ“ƒN‚Æˆê‚ÉƒJƒƒ‰‚ð“®‚©‚·‚æ
+	//ã‚¿ãƒ³ã‚¯ã¨ä¸€ç·’ã«ã‚«ãƒ¡ãƒ©ã‚’å‹•ã‹ã™ã‚ˆ
 	//Camera::SetTarget(player->GetPosition());
 	//XMFLOAT3 camPos = player->GetPosition();
 	//camPos.y += 8;
 	//camPos.z -= 15;
 	//Camera::SetPosition(camPos);
+	if (enemyNum == 0)
+	{
+		SceneManager* pSM = (SceneManager*)FindObject("SceneManager");
+		pSM->ChangeScene(SCENE_ID_CLEAR);
+	}
 }
 
 void PlayScene::Draw()
