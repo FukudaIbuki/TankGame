@@ -1,7 +1,8 @@
 #include "sceneManager.h"
 
 #include "../TitleScene.h"
-#include "../TestScene.h"
+#include "../TPlayScene.h"
+#include "../ClearScene.h"
 #include "Model.h"
 #include "Image.h"
 #include "Audio.h"
